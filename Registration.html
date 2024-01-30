@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Courses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/22/14/42/globe-1849404_1280.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .transparent-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 700px;
+            margin-bottom: 20px;
+        }
+
+        .transparent-box label {
+            color: white;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .form-row .col-sm-6 {
+            width: 48%;
+        }
+    </style>
+    <script>
+        function showSuccessMessage() {
+            alert("Registration successful!");
+            
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1><b>ASTRO HUB</b></h1>
+    </header>
+
+    <div class="container transparent-box">
+        <h2>Courses</h2>
+
+        <p>
+            Explore the wonders of the universe with our exciting courses at ASTRO HUB. Whether you're a student eager
+            to learn or a teacher passionate about sharing knowledge, we have courses tailored for you.
+        </p>
+        <p>
+            Our courses cover a wide range of topics, including the study of planets, satellites, the sun, the moon,
+            and the stars. Choose your area of interest and dive into the fascinating world of astronomy.
+        </p>
+        <p>
+            Each course is designed to cater to different levels of expertise—whether you are a beginner, an
+            intermediate learner, or looking for an advanced exploration, we have the right course for you.
+        </p>
+        <p>
+            Join us in unraveling the mysteries of the cosmos. Click the link below to register and embark on a
+            celestial journey!
+        </p>
+
+        <p class="text-center">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#registrationForm" role="button"
+                aria-expanded="false" aria-controls="registrationForm">
+                Click here to register
+            </a>
+        </p>
+
+        <div class="collapse" id="registrationForm">
+            <h2>Registration form</h2>
+            <form action="register.php" method="POST" onsubmit="return showSuccessMessage();">
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name"
+                            required>
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter your age" name="age"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email"
+                            required>
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label for="userName">User Name:</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Enter your User name"
+                            name="userName" required>
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password"
+                            name="password" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label>You are:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="youAre" id="student" value="student"
+                                required>
+                            <label class="form-check-label" for="student">
+                                Student
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="youAre" id="teacher" value="teacher"
+                                required>
+                            <label class="form-check-label" for="teacher">
+                                Teacher
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label for="course">Select Course:</label>
+                        <select class="form-select" id="course" name="course" required>
+                            <option value="" disabled selected>Select Course</option>
+                            <option value="1">PLANETS</option>
+                            <option value="2">SATELLITES</option>
+                            <option value="3">SUN</option>
+                            <option value="4">MOON</option>
+                            <option value="5">STARS</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <label for="level">Select Level:</label>
+                        <select class="form-select" id="level" name="level" required>
+                            <option value="" disabled selected>Select Level</option>
+                            <option value="1">Beginner</option>
+                            <option value="2">Intermediate</option>
+                            <option value="3">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                    <label class="form-check-label" for="remember">Remember me</label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
