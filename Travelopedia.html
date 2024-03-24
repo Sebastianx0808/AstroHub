@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="favi.jpg">
+    <title>Travelopedia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"href="styles.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar
+      bg m-navbar-light" id="main-navbar">
+      <div class="container">
+          <a class="navbar-brand text-light"href="#">Travelopedia</a>
+          <button class="navbar-toggler"type="button"data-toggle="collapse"
+          data-target="#my-nav" aria-controls="p-nav"aria-expanded="false"
+          aria-label="toggle-navigation">
+        <span>Menu</span>
+        </button>
+        <div class="collapse navbar-collapse"id="my-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a href="index.html"class="nav-link text-white ">Home</a>
+                </li>
+                <li class="nav-item active text-light">
+                    <a href="#aboutus"class="nav-link text-white  ">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#"class="nav-link text-white  ">Popular Places</a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="#"class="nav-link text-white  ">Services</a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="#"class="nav-link text-white  ">Historical Places</a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="#"class="nav-link text-white  ">Blog</a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="#"class="nav-link text-white ">Contact</a>
+                </li>
+                <li class="nav-item active ">
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="text-white bg-dark rounded-pill">Sign Up</button>
+
+                    <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content" action="/action_page.php">
+                        <div class="container">
+                        <h1>Sign Up</h1>
+                        <p>Please fill in this form to create an account.</p>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
+
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                        </div>
+                    </form>
+                    </div>
+
+                    <script>
+              
+                    var modal = document.getElementById('id01');
+
+                    window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                    }
+                    </script>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="hero-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters main-text align-items-center">
+            <div class="col-lg-7 col-md-6 d-flex align-items-end">
+                <div class="text">
+                    <h1 class="mb-4 text-capitalize">Tours and Trip packages, Globally<br>
+                        
+                      </h1>
+                      <p style="font-size:18px;">Search, compare and book 15,000+ multiday touirs all over the world</p>
+                    <a href="#" class="btn btn-hero py-2 px-3">View all</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-search">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 tab-search">
+              <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Flights</a>
+              <a class="nav-link p-3" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"> Hotels</a>
+              <a class="nav-link p-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Car Rents</a>
+              <a class="nav-link p-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"> Cruises</a>
+            </div>
+          </div>
+
+          <div class="tab-content py-5" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <div class="block-17">
+                <form class="d-block d-lg-flex">
+                  <div class="fields d-block d-lg-flex">
+
+                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Search Location"></div>
+
+                    <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
+
+                    <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
+                    <div class="select-wrap one-third">
+                   <select name="" id="" class="form-control">
+                        <option value="">Guest</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3+</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <input type="submit" class="search-submit btn btn-primary" value="Find Flights">
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <div class="block-17">
+                <form action="" method="post" class="d-block d-lg-flex">
+                  <div class="fields d-block d-lg-flex">
+                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Search Hotel"></div>
+
+                    <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
+
+                    <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="" class="form-control">
+                        <option value="">Guest</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3+</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <input type="submit" class="search-submit btn btn-primary" value="Find Hotels">
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <div class="block-17">
+                <form action="" method="post" class="d-block d-lg-flex">
+                  <div class="fields d-block d-lg-flex">
+                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Search Location"></div>
+
+                    <div class="check-in one-third"><input type="text" id="start_date" class="form-control" placeholder="Start date"></div>
+
+                    <div class="check-out one-third"><input type="text" id="return_date" class="form-control" placeholder="Return date"></div>
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="" class="form-control">
+                        <option value="">Guest</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3+</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <input type="submit" class="search-submit btn btn-primary" value="Find Car">
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <div class="block-17">
+                <form action="" method="post" class="d-block d-lg-flex">
+                  <div class="fields d-block d-lg-flex">
+                    <div class="textfield-search one-third one-third-1"><input type="text" class="form-control" placeholder="Search Location"></div>
+
+
+                    <div class="check-out one-third one-third-1"><input type="text" id="start_date" class="form-control" placeholder="Check-out date"></div>
+
+                    <div class="select-wrap one-third one-third-1">
+                      <div class="icon"></div>
+                      <select name="" id="" class="form-control">
+                        <option value="">Categories</option>
+                        <option value="">Suite</option>
+                        <option value="">Super Deluxe</option>
+                        <option value="">Economy</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <input type="submit" class="search-submit btn btn-primary" value="Find Cruise">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about-section mt-5" id="#aboutus">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center heading-section mb-5">
+                <h2 class="text-black mb-2">Welcome To Travelopedia</h2>
+                <p>Travelopedia is one of the best tourism providers in India. We offer deal for your travel, weather you want to stay in city apartment, Luxury hotels, Beach resorts or a cozy cottage.</p>
+            </div>
+        </div>
+        <div class="row img-wrap mb-5 mb-lg-0">
+            <div class="col-12">
+                <div class="row">
+                    <div class="mb-4 margin-lg-0 col-lg-6 order-lg-2">
+                        <a href="#" class="effect">
+                            <img src="https://i.postimg.cc/P5n01vCY/about-1.jpg"alt=""
+                            class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-lg-5 mr-auto text-lg-right align-self-center order-lg-1">
+                        <h2 class="text-black">Culture</h2>
+                        <p class="mb-4">
+                            Dive into India's cultural kaleidoscope, experiencing its vibrant regional festivals and unique traditions.
+                        </p>
+                        <a href="#"class="btn btn-about">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------->
+        <div class="row img-wrap mb-5 mb-lg-0">
+            <div class="col-12">
+                <div class="row">
+                    <div class="mb-4 margin-lg-0 col-lg-6">
+                        <a href="#" class="effect">
+                            <img src="https://i.postimg.cc/1XjnLZq1/about-2.jpg"alt=""
+                            class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-lg-5 ml-auto align-self-center order-lg-1">
+                        <h2 class="text-black">History</h2>
+                        <p class="mb-4">
+                            Go deeper. Explore the ruins of Ancient Greece or the opulence of Medici-era Florence; walk in the footsteps of Winston Churchill or Abraham Lincoln’s hand-picked generals; see the winter wonderland that is Yellowstone; hear the sultry notes of jazz echoing through the streets of the French Quarter. No matter your particular passion, our world-renowned historians and local guides will lead you on a once-in-a-lifetime experience to discover the history that’s all around us.
+                        </p>
+                        <a href="#"class="btn btn-about">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------->
+        <div class="row img-wrap mb-5 mb-lg-0">
+            <div class="col-12">
+                <div class="row">
+                    <div class="mb-4 margin-lg-0 col-lg-6 order-lg-2">
+                        <a href="#" class="effect">
+                            <img src="https://i.postimg.cc/1X9r9PXg/about-3.jpg"alt=""
+                            class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-lg-5 mr-auto text-lg-right align-self-center order-lg-1">
+                        <h2 class="text-black">Nature</h2>
+                        <p class="mb-4">
+                            Whether it's a cruise through the Galapagos Islands, a soar over the Amazon rainforest, a descent into Vietnam's vast cave systems, or a trek in the Himalayas, nature travel gifts sights and experiences you simply wouldn't see or feel anywhere else. Hand in hand with that is ecotourism, a type of travel that simultaneously drops tourists into stunning natural environments and funds conservation efforts to protect them. Travel + Leisure evaluates nature-oriented tour companies, outfitters, and accommodations based on their value, quality, and environmental stewardship. Whether it's an outdoor adventure or a glimpse into a destination's wildlife you're after, the news, tips, and recommendations here will prepare you for the adventure ahead. 
+                        </p>
+                        <a href="#"class="btn btn-about">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------->
+    </div>
+</section>
+
+<section>
+      <div class="popular section-bg img-effect mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+        <div class="section-title text-center">                      
+          <h1 class="text-white">Popular Places </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="all-image">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-md-5">
+                    <div class="single-img">
+                        <div class="img-thumb">
+                            <img src="https://i.postimg.cc/FK4dtp7z/img-1.jpg" alt="">
+                        </div>
+                        <div class="img-hover">
+                            <div class="title">
+                                    <h3>New Zealand</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-7">
+                    <div class="single-img">
+                        <div class="img-thumb">
+                            <img src="https://i.postimg.cc/gkx63rCz/img-2.jpg" alt="">
+                        </div>
+                        
+                        <div class="img-hover">
+                            <div class="title">
+                                    <h3>Venice</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single-img radial">
+                        <div class="img-thumb">
+                            <img src="https://i.postimg.cc/Hnd1dJbQ/img-3.jpg" alt="">
+                        </div>
+                       <div class="img-hover">
+                        <div class="title">
+                        <h3>Switzerland</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single-img radial">
+                        <div class="img-thumb">
+                            <img src="https://i.postimg.cc/2SwbDvvx/img-4.jpg" alt="">
+                        </div>
+                         <div class="img-hover">
+                            <div class="title">
+                                    <h3>Denmark</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12 col-lg-4">
+                    <div class="single-img radial">
+                        <div class="img-thumb">
+                            <img src="https://i.postimg.cc/TwmTRMFX/img-5.jpg" alt="">
+                        </div>
+                     <div class="img-hover">
+                            <div class="title">
+                                    <h3>Canada</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+    </div>
+  
+</section>
+
+
+<section id="services" class="services section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="section-title">
+                    <h2>Services We Provide</h2>
+                    <p>
+                        Welcome to Travelopedia, where unforgettable journeys await. Our personalized itineraries cater to your unique preferences, offering exclusive deals on accommodations, flights, and tours. With expert guidance from our experienced travel advisors, tailored experiences, and a commitment to your safety and satisfaction, we're here to turn your travel dreams into reality. Whether you're seeking relaxation, adventure, or cultural immersion, trust [Travel Company Name] to deliver an exceptional travel experience that exceeds your expectations.
+                    </p>
+                </div>
+            </div>
+            <!----->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="icon-circle purple">
+                            <div class="icon">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+                            <h4 class="text-white">Good Food</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quia.</p>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="icon-circle pink">
+                            <div class="icon">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <h4 class="text-white">Beach Resort</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quia.</p>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-circle yellow">
+                            <div class="icon">
+                                <i class="fas fa-hiking"></i>
+                            </div>
+                            <h4 class="text-white">Mountain-climbing</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quia.</p>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-circle blue">
+                            <div class="icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h4 class="text-white">Hot Air Ballon</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quia.</p>
+                        </div>
+                    </div>
+                    <!---->
+    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team section-bg mt-5">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="text-center">Team</h2>
+            <p class="text-center">
+                Meet the core team behind Travelopedia, each passionate about crafting exceptional travel experiences for our clients. With diverse backgrounds and expertise in various destinations, our team members bring a wealth of knowledge and enthusiasm to every journey. From experienced travel advisors providing expert guidance to meticulous planners ensuring every detail is perfect, we're committed to ensuring your trip is memorable and hassle-free. Trust our team to turn your travel aspirations into unforgettable adventures.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="person3.jpg"class="img-fluid"alt="">
+                        <div class="social">
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="member-info">
+                        <h4>Sarah Mcarthy</h4>
+                        <span>CEO</span>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="person1.jpg"class="img-fluid"alt="">
+   <div class="social">
+        <a href=""><i class="fab fa-facebook"></i></a>
+             <a href=""><i class="fab fa-twitter"></i></a>
+           <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+
+     </div>
+                    <div class="member-info">
+                        <h4>Federick Williams</h4>
+                        <span>Travel Administrator</span>
+                    </div>
+                </div>
+            </div>
+            <!---->
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+  <img src="person2.jpg"class="img-fluid"alt="">
+       <div class="social">
+        <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+           <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin"></i></a>
+          </div>
+  </div>
+     <div class="member-info">
+                        <h4>Kevin Peter</h4>
+                        <span>Systems Head</span>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="person4.jpg"class="img-fluid"alt="">
+                        <div class="social">
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="member-info">
+                        <h4>Anthony Blinken</h4>
+                        <span>Chief Finance Officer</span>
+                    </div>
+                </div>
+            </div>
+            <!---->
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="package section-padding mt-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5">
+                <div class="section-title text-center">
+                    <h2 class="py-3">Packages We Offer</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xl-6">
+                <div class="package-1">
+                    <img src="https://i.postimg.cc/bNr1Lmtj/fa-3.jpg"class="img-fluid"alt="">
+                    <div class="package-text">
+                        <p>Explore the world with ease through our international packages at Travelopedia. Handcrafted for seamless adventures, our curated itineraries promise unforgettable experiences across diverse destinations. From iconic landmarks to hidden gems, trust us to unlock the globe's wonders with convenience and expertise.</p>
+                        <a href="#"class="btn-package p-2">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!----->
+            <div class="col-md-6 col-xl-6">
+                <div class="package-1">
+                    <img src="https://i.postimg.cc/cCwGNRK1/fa-2.jpg"class="img-fluid"alt="">
+                    <div class="package-text">
+                        <p>Embark on a cultural odyssey through the heart of India with our bespoke cultural tourism packages at Travelopedia. Delve into the rich tapestry of India's heritage, from majestic forts and palaces to vibrant festivals and traditions. Our meticulously crafted itineraries offer immersive experiences that showcase the diverse cultural fabric of India, ensuring a journey filled with enchantment and discovery. Let us be your guide as you unravel the timeless charm of India's cultural treasures.</p>
+                        <a href="#"class="btn-package p-2">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-2">
+    <div class="historical-places">
+        <div class="container">
+            <div class="row-justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center mb-70">
+                        <h3 class="text-uppercase text-center">historical places</h3>
+                        <p class="text-center">Exploring history, one landmark at a time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-dest">
+                        <div class="thumb">
+                            <img src="https://i.postimg.cc/wBCWYSDJ/fa-6.jpg"class="img-fluid"alt="">
+                            <a href="#"class="price">$450</a>
+                        </div>
+                        <div class="dest-info">
+                            <a href="#">
+                                <h3>Nymphenburg Palace, Munich</h3>
+                            </a>
+                            <p>The Nymphenburg Palace is a Baroque palace situated in Munich's western district Neuhausen-Nymphenburg, in Bavaria, southern Germany. </p>
+                            <div class="rating d-flex justify-content-between">
+                          <span class="d-flex justify-content-center align-items-center">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <a href="#">(100 Review)</a>
+                          </span>
+                          <div class="days">
+                              <i class="fas fa-clock-o">
+                                  <a hrf="#">3 Days</a>
+                              </i>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-dest">
+                        <div class="thumb">
+                            <img src="https://i.postimg.cc/cCwGNRK1/fa-2.jpg"class="img-fluid"alt="">
+                            <a href="#"class="price">$400</a>
+                        </div>
+                        <div class="dest-info">
+                            <a href="#">
+                                <h3>London</h3>
+                            </a>
+                            <p>London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations.</p>
+                            <div class="rating d-flex justify-content-between">
+                          <span class="d-flex justify-content-center align-items-center">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <a href="#">(190 Review)</a>
+                          </span>
+                          <div class="days">
+                              <i class="fas fa-clock-o">
+                                  <a hrf="#">3 Days</a>
+                              </i>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-dest">
+                        <div class="thumb">
+                            <img src="https://i.postimg.cc/bNr1Lmtj/fa-3.jpg"class="img-fluid"alt="">
+                            <a href="#"class="price">$500</a>
+                        </div>
+                        <div class="dest-info">
+                            <a href="#">
+                                <h3>Scotland</h3>
+                            </a>
+                            <p>An 11th-century castle with the Crown Jewels and the National War Museum of Scotlan</p>
+                            <div class="rating d-flex justify-content-between">
+                          <span class="d-flex justify-content-center align-items-center">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <a href="#">(101 Review)</a>
+                          </span>
+                          <div class="days">
+                              <i class="fas fa-clock-o">
+                                  <a hrf="#">2 Days</a>
+                              </i>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-dest">
+                        <div class="thumb">
+                            <img src="https://i.postimg.cc/W3ZHD2sX/fa-4.jpg"class="img-fluid"alt="">
+                            <a href="#"class="price">$250</a>
+                        </div>
+                        <div class="dest-info">
+                            <a href="#">
+                                <h3>France</h3>
+                            </a>
+                            <p>France, in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower.</p>
+                            <div class="rating d-flex justify-content-between">
+                          <span class="d-flex justify-content-center align-items-center">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <a href="#">(501 Review)</a>
+                          </span>
+                          <div class="days">
+                              <i class="fas fa-clock-o">
+                                  <a hrf="#">4 Days</a>
+                              </i>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-dest">
+                        <div class="thumb">
+                            <img src="https://i.postimg.cc/nz1qS52n/fa-5.jpg"class="img-fluid"alt="">
+                            <a href="#"class="price">$650</a>
+                        </div>
+                        <div class="dest-info">
+                            <a href="#">
+                                <h3>Italy</h3>
+                            </a>
+                            <p>Rome is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome Capital, and a special comune named Comune di Roma Capitale.</p>
+                            <div class="rating d-flex justify-content-between">
+                          <span class="d-flex justify-content-center align-items-center">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              
+                              
+                              <a href="#">(100 Review)</a>
+                          </span>
+                          <div class="days">
+                              <i class="fas fa-clock-o">
+                                  <a hrf="#">5 Days</a>
+                              </i>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-dest">
+                        <div class="thumb">
+                            <img src="peru.jpg"class="img-fluid"alt="">
+                            <a href="#"class="price">$500</a>
+                        </div>
+                        <div class="dest-info">
+                            <a href="#">
+                                <h3>Peru</h3>
+                            </a>
+                            <p>Peru is a country in South America that's home to a section of Amazon rainforest and Machu Picchu, an ancient Incan city high in the Andes mountains. The region around Machu Picchu, including the Sacred Valley, Inca Trail and colonial city of Cusco, is rich in archaeological sites</p>
+                            <div class="rating d-flex justify-content-between">
+                          <span class="d-flex justify-content-center align-items-center">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <a href="#">(190 Review)</a>
+                          </span>
+                          <div class="days">
+                              <i class="fas fa-clock-o">
+                                  <a hrf="#">6 Days</a>
+                              </i>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="btn-hist text-center ">
+                      <div><a href="#" class="btn btn-hist">More Places</a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2>Happy Customers</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="testimonial-item">
+                    <div class="test-date">
+                        09/08/2020
+                    </div>
+                    <h4>Unforgettable Journey!
+
+                    </h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        
+                    </div>
+                    <p>"My family and I had the most incredible adventure with Travelopedia. From the breathtaking views to the seamless logistics, every moment was unforgettable. The personalized attention to detail and expert recommendations truly made our trip one for the books. Can't wait to plan our next getaway with them!</p>
+                    <div class="customer">
+                        <div class="customer-photo">
+                            <img src="person2.jpg"alt="">
+                        </div>
+                        <div class="test-text">
+                            <h6>Sebastian Jose <span>Belgium</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----->
+            <div class="col-lg-6">
+                <div class="testimonial-item">
+                    <div class="test-date">
+                        09/08/2020
+                    </div>
+                    <h4>Exceptional Service!
+
+                    </h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>I recently embarked on a cultural tour of India with Travelopedia, and it exceeded all expectations. The itinerary was perfectly curated to immerse us in the vibrant culture and history of India, and the level of service provided by the team was exceptional. I highly recommend Travelopedia to anyone seeking an authentic and enriching travel experience.</p>
+                    <div class="customer">
+                        <div class="customer-photo">
+                            <img src="person3.jpg"alt="">
+                        </div>
+                        <div class="test-text">
+                            <h6>Sarah Johnson <span>Newzealand</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----->
+        </div>
+    </div>
+</section>
+<section class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2 class="text-center pb-2">
+                        Recent Blog
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <img src="https://i.postimg.cc/FK4dtp7z/img-1.jpg" class="img-fluid" alt="">
+                    <div class="blog-detail">
+                        <div class="blog-date">
+                            December 16,2021
+                        </div>
+                        <a href="#"class="tag">#travel</a>
+                    </div>
+                    <h4><a href="#">Unveiling Hidden Gems: Off-the-Beaten-Path Destinations</a></h4>
+                </div>
+            </div>
+            <!----->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <img src="https://i.postimg.cc/gkx63rCz/img-2.jpg" class="img-fluid" alt="">
+                    <div class="blog-detail">
+                        <div class="blog-date">
+                            July 09,2020
+                        </div>
+                        <a href="#"class="tag">#food</a>
+                    </div>
+                    <h4><a href="#">Culinary Adventures: Exploring the World Through Food</a></h4>
+                </div>
+            </div>
+            <!----->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <img src="https://i.postimg.cc/Hnd1dJbQ/img-3.jpg" class="img-fluid" alt="">
+                    <div class="blog-detail">
+                        <div class="blog-date">
+                            January 09,2023
+                        </div>
+                        <a href="#"class="tag">#culture</a>
+                    </div>
+                    <h4><a href="#">Cultural Immersion: Embracing Traditions Around the Globe</a></h4>
+                </div>
+            </div>
+            <!----->
+        </div>
+    </div>
+</section>
+
+<section class="contact mt-3">
+<div class="container">
+    <div class="section-title">
+        <h2 class="text-center">
+            Contact Us
+        </h2>
+        <p class="text-center">
+            Let's Plan Your Next Adventure Together!
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="icon-box">
+                        <i class="fas fa-share"></i>
+                        <h3>Social Profiles</h3>
+                        <div class="social-links">
+                            <a href="https://www.bing.com/ck/a?!&&p=89ac25a0da709a3aJmltdHM9MTcwOTY4MzIwMCZpZ3VpZD0xNTE3ZDUwOS1kODdkLTZiM2MtMmVmYi1jNmEwZDlkMDZhYTQmaW5zaWQ9NTIxNg&ptn=3&ver=2&hsh=3&fclid=1517d509-d87d-6b3c-2efb-c6a0d9d06aa4&psq=twitter&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS8_bGFuZz1lbi1pbg&ntb=1"class="twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=a3948ff844486f78JmltdHM9MTcwOTY4MzIwMCZpZ3VpZD0xNTE3ZDUwOS1kODdkLTZiM2MtMmVmYi1jNmEwZDlkMDZhYTQmaW5zaWQ9NTIxOQ&ptn=3&ver=2&hsh=3&fclid=1517d509-d87d-6b3c-2efb-c6a0d9d06aa4&psq=Facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLw&ntb=1"class="facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=9a932a9b59ee3a5fJmltdHM9MTcwOTY4MzIwMCZpZ3VpZD0xNTE3ZDUwOS1kODdkLTZiM2MtMmVmYi1jNmEwZDlkMDZhYTQmaW5zaWQ9NTIyMA&ptn=3&ver=2&hsh=3&fclid=1517d509-d87d-6b3c-2efb-c6a0d9d06aa4&psq=instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8_aGw9ZW4&ntb=1"class="instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=e5fa93a697275b0bJmltdHM9MTcwOTY4MzIwMCZpZ3VpZD0xNTE3ZDUwOS1kODdkLTZiM2MtMmVmYi1jNmEwZDlkMDZhYTQmaW5zaWQ9NTIxOA&ptn=3&ver=2&hsh=3&fclid=1517d509-d87d-6b3c-2efb-c6a0d9d06aa4&psq=Linkedin&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2xvZ2lu&ntb=1"class="linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="icon-box mt-4">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>travelopedia.@gmail.com</p>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="icon-box mt-4">
+                        <i class="fas fa-phone"></i>
+                        <h3>24/7 support</h3>
+                        <p>+91 6789 098 675</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <input type="text"name="name"class="form-control"
+                        id="name"placeholder="your name">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email"name="email"class="form-control"
+                        id="email"placeholder="your email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control"name="subject"
+                    id="subject"placeholder="subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control"name="message"row="6"
+                    placeholder="Message"></textarea>
+                </div>
+                <div><button type="submit" id="submit" class="btn btn-about" >Send Message</button></div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = '';
+            formData.forEach(function(value, key) {
+                modalContent.innerHTML += '<strong>' + key + ':</strong> ' + value + '<br>';
+            });
+            $('#myModal').modal('show');
+        });
+    </script>
+</div>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Message Successfully Sent! Thank you for you feedback</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalContent"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</section> 
+<section class="instagram mt-5">
+    <div class="container-fluid">
+        <div class="row no-gutters justify-content-center pb-5">
+            <div class="col-md-7 text-center heading-section">
+                <h2><span>Instagram</span></h2>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-sm-12 col-md">
+                <img src="https://i.postimg.cc/wBCWYSDJ/fa-6.jpg"class="img-fluid">
+                <div class="icon d-flex justify-content-center">
+                    <span class="icon-instagram align-self-center"></span>
+                </div>
+            </div>
+            <!----->
+            <div class="col-sm-12 col-md">
+                <img src="https://i.postimg.cc/W3ZHD2sX/fa-4.jpg"class="img-fluid">
+                <div class="icon d-flex justify-content-center">
+                    <span class="icon-instagram align-self-center"></span>
+                </div>
+            </div>
+            <!----->
+            <div class="col-sm-12 col-md">
+                <img src="https://i.postimg.cc/bNr1Lmtj/fa-3.jpg"class="img-fluid">
+                <div class="icon d-flex justify-content-center">
+                    <span class="icon-instagram align-self-center"></span>
+                </div>
+            </div>
+            <!----->
+            <div class="col-sm-12 col-md">
+                <img src="https://i.postimg.cc/nz1qS52n/fa-5.jpg"class="img-fluid">
+                <div class="icon d-flex justify-content-center">
+                    <span class="icon-instagram align-self-center"></span>
+                </div>
+            </div>
+            <!----->
+            <div class="col-sm-12 col-md">
+                <img src="https://i.postimg.cc/wBCWYSDJ/fa-6.jpg"class="img-fluid">
+                <div class="icon d-flex justify-content-center">
+                    <span class="icon-instagram align-self-center"></span>
+                </div>
+            </div>
+            <!----->
+        </div>
+
+    </div>
+</section>
+<!---->
+<footer id="footer">
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h4>Join Our News Letter</h4>
+                    <p>Stay Inspired: Subscribe to Our Newsletter Today!</p>
+                    <form>
+                        <input type="email"name="email">
+                        <input type="submit"value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="container py-4">
+      <div class="copyright">
+          &copy;Copyright<strong><span> Travelopedia</span></strong>
+             All Rights Reserved
+      </div>
+      <div class="credits">
+          Designed by<a href="#"> Sebastian Jose</a>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
